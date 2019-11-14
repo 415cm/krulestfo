@@ -100,12 +100,12 @@ a, p, h1, h2, h3{
   text-transform: uppercase;
   outline: 0;
   background: #8b9ca0;
-  width: 220px;
-  
+  width: 150px;
+
   border: 0;
   padding: 15px;
   color: #FFFFFF;
-  font-size: 14px;
+  font-size: 10px;
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   cursor: pointer;
@@ -164,3 +164,18 @@ height: 80px;
 
 }
 
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+.button5{
+	width: 70px;
+}
