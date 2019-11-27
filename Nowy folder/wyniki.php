@@ -5,12 +5,23 @@
 </head>
 <body>
 <div class="topnav">
-  
+  <?php
+  session_start();
+  if (isset($_SESSION['login']))
+  {
+  $username = $_SESSION['login'];
+  echo "
+  Twój login to '$username'<br>
+  <a href='logout.php'> wyloguj</a>";
+  }else{
+    echo "<a href='logowanie.php'>zaloguj sie</a>";
+  }
+  ?>
   
 	<h3 class="logo">Bibliometr</h3>
-	<a href="wyszukiwarka.html">Wyszukiwarka</a>
+	<a href="search.php">Wyszukiwarka</a>
   <div class="topnav-right">
-  <a href="stronaglowna.html">Strona główna</a>
+  <a href="index.php">Strona główna</a>
     <a href="osystemie.html">O systemie</a>
     <a href="kontakt.html">Kontakt</a>
   </div>
@@ -20,8 +31,22 @@
 	<div class="form">
     <h1>Wyniki wyszukiwania</h1>
 <?php 
-    require 'conn.php';
-    $sql="SELECT * FROM artikel";
+require 'conn.php';
+$titel="";
+$autor1="";
+$autor2="";
+  if(isset($_POST['submit'])){
+    $search_titel="";
+    if(isset($_POST['titel'])&& $_POST['titel'] != ""){
+        $titel= $_POST['titel'];
+        $search_titel=" AND (titel LIKE '%$titel%')";
+    }
+    $search_autor1="";
+    if(isset($_POST['autor1'])&& $_POST['autor1'] != ""){
+        $autor1= $_POST['autor1'];
+        $search_autor1=" AND (autor1 LIKE '%$autor1%')";
+    }
+    $sql = "SELECT * FROM artikel WHERE id > 0".$search_titel.$search_autor1;
     $result=$conn->query($sql);
     if ($result->num_rows > 0){
 		while ($row = $result->fetch_assoc()){    
@@ -36,6 +61,23 @@
             ;
         }
     }
+  }else{
+    $sql = "SELECT * FROM artikel WHERE id > 0";
+    $result=$conn->query($sql);
+    if ($result->num_rows > 0){
+		while ($row = $result->fetch_assoc()){    
+            echo "<div class='art'>
+            <h3><a href='artykul.html'>".$row['titel']."</a></h3>
+            <a href='autor.html'>".$row['autor1']."</a>
+            <p>".$row['beschreib']."</p>
+            </div>
+            <a href=http://localhost/bibliometr/edit.php?id=".$row['id'].">Edit</a>
+            <a href=http://localhost/bibliometr/delete.php?id=".$row['id'].">Delete</a>
+            <a href=http://localhost/bibliometr/dodaj.php>Add</a>"
+            ;
+        }
+    }
+  }
 ?>
  <div class="buttons">
  <button><a href="artykul.html" class="button1">Przejdź do artykułu</a></button>
