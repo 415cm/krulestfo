@@ -2,13 +2,16 @@
 
 body{
 background-color: #e1e1e1;
-margin:0;
+background-size: 1500px;
+margin: auto;
+/*width: 100%;*/
 }
 
 /* Add a black background color to the top navigation */
 .topnav {
     background-color: #76d0e4;
     overflow: hidden;
+	width: 100%;
 }
 
 /* Style the links inside the navigation bar */
@@ -38,15 +41,15 @@ margin:0;
 .topnav-right {
   float: right;
 }
-
 .logo{
-	left: 45%;
+left: 45%;
 position: absolute;
-width: 100%;
+/*(width: 1500px;*/
 z-index: 99;
 color: white;
 font-family: "Roboto", sans-serif;
 }
+
 
 a, p, h1, h2, h3{
 	font-family: "Roboto", sans-serif;
