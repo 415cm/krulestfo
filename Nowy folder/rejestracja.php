@@ -35,7 +35,7 @@
       <input type='text' name='vorname' placeholder='Nazwisko'/>
       <input type='text' name='email'placeholder='E-Mail'/>
       <input type='password' name='passw'placeholder='Hasło'/>
-      
+      <input type='submit' value='rejestruj' name='submit'/>
       
     </form>
     ";

@@ -41,6 +41,7 @@ margin: auto;
 .topnav-right {
   float: right;
 }
+
 .logo{
 left: 45%;
 position: absolute;
@@ -49,7 +50,6 @@ z-index: 99;
 color: white;
 font-family: "Roboto", sans-serif;
 }
-
 
 a, p, h1, h2, h3{
 	font-family: "Roboto", sans-serif;
@@ -92,7 +92,8 @@ a, p, h1, h2, h3{
   outline: 0;
   background: #f2f2f2;
   width: 100%;
-  border: 0;
+  border: 1;
+  border-color: #ff0000;
   margin: 0 0 15px;
   padding: 15px;
   box-sizing: border-box;
@@ -124,23 +125,16 @@ a, p, h1, h2, h3{
   color: #8b9ca0;
   text-decoration: none;
 }
+.form .register-form {
+  display: none;
+}
 
 a:link {
   text-decoration: none;
 }
 
-button{
-	margin-top: 15px;
+.mes{
+	color: #ff0000;
+	font-size: 12px;
+	text-decoration: none;
 }
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-th, td {
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {background-color: #f2f2f2;}

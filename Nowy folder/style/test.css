@@ -41,6 +41,7 @@ margin: auto;
 .topnav-right {
   float: right;
 }
+
 .logo{
 left: 45%;
 position: absolute;
@@ -49,7 +50,6 @@ z-index: 99;
 color: white;
 font-family: "Roboto", sans-serif;
 }
-
 
 a, p, h1, h2, h3{
 	font-family: "Roboto", sans-serif;
@@ -72,7 +72,7 @@ a, p, h1, h2, h3{
 */
 
 .login-page {
-  width: 400px;
+  width: 1200px;
   padding: 8% 0 0;
   margin: auto;
 }
@@ -81,7 +81,7 @@ a, p, h1, h2, h3{
   position: relative;
   z-index: 1;
   background: #FFFFFF;
-  max-width: 360px;
+  max-width: 1200px;
   margin: 0 auto 100px;
   padding: 45px;
   text-align: center;
@@ -103,14 +103,18 @@ a, p, h1, h2, h3{
   text-transform: uppercase;
   outline: 0;
   background: #8b9ca0;
-  width: 100%;
+  width: 120px;
+  height: 60px;
   border: 0;
   padding: 15px;
+  margin: 15px;
   color: #FFFFFF;
   font-size: 14px;
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   cursor: pointer;
+
+ 
 }
 .form button:hover,.form button:active,.form button:focus {
   background: #ddd;
@@ -133,14 +137,38 @@ button{
 	margin-top: 15px;
 }
 
-table {
-  border-collapse: collapse;
-  width: 100%;
+.buttons{
+display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  	
 }
 
-th, td {
-  text-align: left;
-  padding: 8px;
+
+li{
+    list-style:none;
+    
 }
 
-tr:nth-child(even) {background-color: #f2f2f2;}
+
+label,input{
+    display: inline-block;
+    vertical-align: middle;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+tr.border_bottom td {
+  border-bottom:1pt dotted black;
+}
+
+.pole1{
+	word-wrap:break-word; 
+	width:110px;
+}
+
+.pole2{
+	word-wrap:break-word; 
+	width:60px;
+}
+

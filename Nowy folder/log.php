@@ -6,7 +6,7 @@ $dbname = "bibliometr";
 $conn = new mysqli ($servername, $username, $password, $dbname);
     require "conn.php";
     global $conn;
-    $sql = "SELECT passw FROM benutzer WHERE email = '".$_POST['email']."'";
+    $sql = "SELECT passw, typ FROM benutzer WHERE email = '".$_POST['email']."'";
     $result = $conn->query($sql);
     $rows = $result->num_rows;
     $result->data_seek(0);
@@ -17,6 +17,7 @@ $conn = new mysqli ($servername, $username, $password, $dbname);
         echo "zalogowano";
         session_start();
         $_SESSION['login'] = $_POST['email'];
+        $_SESSION['id'] = $row[1];
         header("Location: wyniki.php");
     }
     ?>
