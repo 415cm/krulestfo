@@ -162,3 +162,13 @@ tr.border_bottom td {
   border-bottom:1pt dotted black;
 }
 
+.pole1{
+	word-wrap:break-word; 
+	width:110px;
+}
+
+.pole2{
+	word-wrap:break-word; 
+	width:60px;
+}
+
