@@ -10,7 +10,7 @@
   
 	<h3 class="logo">Bibliometr</h3>
   <div class="topnav-right">
-  <a class="active" href="index.html">Strona główna</a>
+  <a class="active" href="index.php">Strona główna</a>
     <a href="osystemie.html">O systemie</a>
     <a href="kontakt.html">Kontakt</a>
   </div>
