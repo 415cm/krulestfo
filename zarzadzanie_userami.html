@@ -9,7 +9,7 @@
   
   
 	<h3 class="logo">Bibliometr</h3>
-	<a class="active" href="wyszukiwarka.html">Wyszukiwarka</a>
+	<a href="wyszukiwarka.html">Wyszukiwarka</a>
   <div class="topnav-right">
   <a href="stronaglowna.html">Strona główna</a>
     <a href="osystemie.html">O systemie</a>
@@ -18,12 +18,10 @@
 </div>
 
  <div class="selectWrapper">
-  <select class="selectBox">
+  <select class="selectBox" onchange="location = this.value;">
   <option>Administrator</option>
-  <option><a href="mojprofil.html">Mój profil</a></option>
-  <option><a href="zarzadzanie_artykuly.html">Zarządzanie artykułami</a></option>
-  <option><a href="zarzadzanie_userami.html">Zarządzanie użytkownikami</a></option>
-  <option><a href="wyloguj.html">Wyloguj</a></option>
+  <option value="zarzadzanie_artykuly.html">Zarządzanie artykułami</option>
+  <option value="zarzadzanie_userami.html">Zarządzanie użytkownikami</option>
 </select>
 </div>
 

@@ -21,167 +21,48 @@
 	
 	<div class="form">
 	<h1>Wyniki wyszukiwania</h1>
-	<!--
-    <form class="search-form">
-      <input type="text" placeholder="Wyszukaj artykuł..."/>
-      <input type="text" placeholder="Tytuł"/>
-	  <input type="text" placeholder="Autor"/>
-	  <input type="text" placeholder="Data publikacji"/>
-	  <input type="text" placeholder="Czasopismo"/>
-	  <input type="text" placeholder="Konferencja"/>
-      <button>Szukaj</button>
-      <p class="message">* Opcjonalny wybór filtra</p>
-    </form>
- -->
- <table class="art">
- <p>Zaznacz, które pola chcesz wyeksportować</p>
- 
- <!-- Checkboxy -->
-	<tr>
-	<td>
-		
-	</td>
-	<td>
-		<input id="checkid" type="checkbox" value="test" class="pole1"/>
-	</td>
-	<td>
-		<input id="checkid" type="checkbox" value="test" class="pole1"/>
-	</td>
-	<td>
-		<input id="checkid" type="checkbox" value="test" class="pole2"/>
-	</td>
-	<!--
-	<td>
-		<input id="checkid" type="checkbox" value="test" style="word-wrap:break-word; width:80px;"/>
-	</td>
-	<td>
-		<input id="checkid" type="checkbox" value="test" style="word-wrap:break-word; width:30px;"/>
-	</td>
-	<td>
-		<input id="checkid" type="checkbox" value="test" style="word-wrap:break-word; width:100px;"/>
-	</td>
-	<td>
-		<input id="checkid" type="checkbox" value="test" style="word-wrap:break-word; width:30px;"/>
-	</td>
-	-->
-	<td>
-		<input id="checkid" type="checkbox" value="test" class="pole1"/>
-	</td>
-	<td>
-		<input id="checkid" type="checkbox" value="test" class="pole1"/>
-	</td>
-	<td>
-		<input id="checkid" type="checkbox" value="test" class="pole1"/>
-	</td>
-	<td>
-		<input id="checkid" type="checkbox" value="test" class="pole1"/>
-	</td>
-	<td>
-		<input id="checkid" type="checkbox" value="test" class="pole2"/>
-	</td>
-	<td>
-		<input id="checkid" type="checkbox" value="test" class="pole2"/>
-	</td>
- </tr>
- 
- <!-- Nagłówki kolumn -->
- 
- <tr class="border_bottom">
- <td>
- </td>
-	<td>
-		<label for="checkid" class="pole1"/><a href="artykul.html">Tytuł artykułu</a></label>
-	</td>
-	<td>
-		<label for="checkid" class="pole1"/><a href="autor.html">Autor Nazwisko</a></label>
-	</td>
-	<td>
-		<label for="checkid" class="pole2"/>% udziału autora1</label>
-	</td>
-	<!--
-	<td>
-		<label for="checkid"><a href="autor.html">Autor2 Nazwisko</a></label>
-	</td>
-	<td>
-		<label for="checkid">% udziału autora2</label>
-	</td>
-	<td>
-		<label for="checkid"><a href="autor.html">Autor3 Nazwisko</a></label>
-	</td>
-	<td>
-		<label for="checkid">% udziału autora3</label>
-	</td>
-	-->
-	<td>
-		<label for="checkid" class="pole1"/>Opis artykułu</label>
-	</td>
-	<td>
-		<label for="checkid" class="pole1"/>Data publikacji</label>	
-	</td>
-	<td>
-		<label for="checkid" class="pole1"/>Czasopismo</label>	
-	</td>
-	<td>
-		<label for="checkid" class="pole1"/>Konferencja</label>	
-	</td>
-	<td>
-		<label for="checkid" class="pole2"/>Impact factor</label>	
-	</td>
-	<td>
-		<label for="checkid" class="pole2"/>DOI</label>	
-	</td>
-  </tr>
-  
-
-  
-  <!-- Wyniki wyszukiwania -->
- <tr>
- <td><input id="checkid" type="checkbox" value="wszystko" class="pole2"/><label for="checkid" class="pole2"/>Zaznacz wiersz</label>
- </td>
-	<td>
-		<label for="checkid" class="pole1"/><a href="artykul.html">baaaardzo dlugi tytul sprawdzmy czy sie zmiesci</a></label>
-	</td>
-	<td>
-		<label for="checkid" class="pole1"/><a href="autor.html">tujestjakis autor</a></label>
-	</td>
-	<td>
-		<label for="checkid" class="pole2"/>2 %</label>
-	</td>
-	<!--
-	<td>
-		<label for="checkid"><a href="autor.html">Autor2 Nazwisko</a></label>
-	</td>
-	<td>
-		<label for="checkid">% udziału autora2</label>
-	</td>
-	<td>
-		<label for="checkid"><a href="autor.html">Autor3 Nazwisko</a></label>
-	</td>
-	<td>
-		<label for="checkid">% udziału autora3</label>
-	</td>
-	-->
-	<td>
-		<label for="checkid" class="pole1"/>sggsgs ergsgs segsg sregrgwg g g gaefaegeg wegwgwg wegwgewg</label>
-	</td>
-	<td>
-		<label for="checkid" class="pole1"/>01.01.2019</label>	
-	</td>
-	<td>
-		<label for="checkid" class="pole1"/>tytul czasopisma naukowego</label>	
-	</td>
-	<td>
-		<label for="checkid" class="pole1"/>wEwg wrgrg rg g wGRW</label>	
-	</td>
-	<td>
-		<label for="checkid" class="pole2"/>25</label>	
-	</td>
-	<td>
-		<label for="checkid" class="pole2"/>245346346356364</label>	
-	</td>
-  </tr>
-  
- </table>
+	<h3>Zaznacz, które kolumny chcesz wyeksportować</h3>
+	<div class="divTable">
+<div class="divTableBody">
+<div class="divTableRow">
+<div class="divTableCell pole2">&nbsp;</div>
+<div class="divTableCell pole1"><input id="checkid" type="checkbox" value="tytul"></div>
+<div class="divTableCell pole1"><input id="checkid" type="checkbox" value="autor"></div>
+<div class="divTableCell pole2"><input id="checkid" type="checkbox" value="udzial"></div>
+<div class="divTableCell pole2"><input id="checkid" type="checkbox" value="opis"></div>
+<div class="divTableCell pole1"><input id="checkid" type="checkbox" value="data"></div>
+<div class="divTableCell pole1"><input id="checkid" type="checkbox" value="czasopismo"></div>
+<div class="divTableCell pole1"><input id="checkid" type="checkbox" value="konferencja"></div>
+<div class="divTableCell pole2"><input id="checkid" type="checkbox" value="impactfactor"></div>
+<div class="divTableCell pole2"><input id="checkid" type="checkbox" value="doi"></div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell pole2"></div>
+<div class="divTableCell pole1"><a href="artykul.html">Tytuł artykułu</a></div>
+<div class="divTableCell pole1"><a href="autor.html">Autor</a></div>
+<div class="divTableCell pole2">Udział</div>
+<div class="divTableCell pole2">Opis</div>
+<div class="divTableCell pole1">Data publikacji</div>
+<div class="divTableCell pole1">Czasopismo</div>
+<div class="divTableCell pole1">Konferencja</div>
+<div class="divTableCell pole2">Impact factor</div>
+<div class="divTableCell pole2">DOI</div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell pole2"><input id="zaznacz" type="checkbox" value="wszystko">Zaznacz wiersz</div>
+<div class="divTableCell pole1"><a href="artykul.html">baaaardzo dlugi tytul sprawdzmy czy sie zmiesci</a></div>
+<div class="divTableCell pole1"><a href="autor.html">tujestjakis autor</a></div>
+<div class="divTableCell pole2">2 %</div>
+<div class="divTableCell pole2">to jest jakis opis, streszczenie artykulu i wgl jakies pierdoly</div>
+<div class="divTableCell pole1">01.01.2019</div>
+<div class="divTableCell pole1">tytul czasopisma naukowego</div>
+<div class="divTableCell pole1">wEwg wrgrg rg g wGRW</div>
+<div class="divTableCell pole2">25</div>
+<div class="divTableCell pole2">245346346356364</div>
+</div>
+</div>
+</div>
+<!-- DivTable.com -->
  
  <div class="buttons">
 
