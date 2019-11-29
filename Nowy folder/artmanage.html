@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="styles5.css">
+</head>
+<body>
+<div class="topnav">
+  
+
+	<h3 class="logo">Bibliometr</h3>
+	<a href="wyszukiwarka.html">Wyszukiwarka</a>
+  <div class="topnav-right">
+  <a href="stronaglowna.html">Strona główna</a>
+    <a href="osystemie.html">O systemie</a>
+    <a href="kontakt.html">Kontakt</a>
+  </div>
+</div>
+ <div class="selectWrapper">
+  <select class="selectBox">
+  <option>Administrator</option>
+  <option><a href="mojprofil.html">Mój profil</a></option>
+  <option><a href="zarzadzanie_artykuly.html">Zarządzanie artykułami</a></option>
+  <option><a href="zarzadzanie_userami.html">Zarządzanie użytkownikami</a></option>
+  <option><a href="wyloguj.html">Wyloguj</a></option>
+</select>
+</div>
+
+  
+<div class="login-page">
+
+	
+	<div class="form">
+<button class="addbutton"><a href="dodajartykul.html" >+ Dodaj artykuł</a></button>
+	<h1>Zarządzaj artykułami</h1>
+	<?php
+$sql2 = "SELECT * FROM artikel WHERE id > 0";
+$result2=$conn->query($sql2);
+if ($result2->num_rows > 0){
+    while ($row2 = $result2->fetch_assoc()){ 
+echo"<div class='art'>
+<h3><a href='artykul.html'>".$row2['titel']."</a></h3>
+<a href='autor.html'><p>Autor</p></a>
+<p>Opis artykułu, opisuje zawartość publikacji</p>
+</div>
+<div class='buttons'>
+<button><a href='artykul.html' class='button1'>Przejdź do artykułu</a></button>
+<button><a href='pobierz.html' class='button2'>Pobierz</a></button>
+<button><a href=http://localhost/bibliometr/edit.php?id=".$row2['id']." class='button3'>Edytuj</a></button>
+<button><a href=http://localhost/bibliometr/delete.php?id=".$row2['id']." class='button4'>Usuń</a></button>
+</div>";}}
+?>
+ </div>
+
+  </div>
+
+</body>
+</html>

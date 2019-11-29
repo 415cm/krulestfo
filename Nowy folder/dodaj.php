@@ -5,12 +5,23 @@
 </head>
 <body>
 <div class="topnav">
-  
+<?php
+  session_start();
+  if (isset($_SESSION['login']))
+  {
+  $username = $_SESSION['login'];
+  echo "
+  Zalogowano '$username'<br>
+  <a href='logout.php'> Wyloguj</a>";
+  }else{
+    echo "<a href='logowanie.php'>zaloguj sie</a>";
+  }
+  ?>
 
 	<h3 class="logo">Bibliometr</h3>
-	<a href="wyszukiwarka.html">Wyszukiwarka</a>
+	<a href="search.php">Wyszukiwarka</a>
   <div class="topnav-right">
-  <a href="stronaglowna.html">Strona główna</a>
+  <a href="index.php">Strona główna</a>
     <a href="osystemie.html">O systemie</a>
     <a href="kontakt.html">Kontakt</a>
   </div>
@@ -32,6 +43,7 @@
 	<div class="form">
     <h1>Dodaj nowy artykuł</h1>
     <?php
+    if(isset($_SESSION['login'])){
     require 'conn.php';
     echo"
     <form class='search-form' action='adding.php' method='post'>
@@ -47,10 +59,13 @@
 	  <input type='text' name='konferenz' placeholder='Konferencja'/>
 	  <input type='text' name='doi' placeholder='DOI'/>
 	  <input type='text' name='impactfactor' placeholder='Impact Factor'/>
-	   <input type='text' name='beschreib' class='opis' placeholder='Opis'/>
+	   <input type='text' name='beschreib' placeholder='Opis'/>
        <input type='submit' value='dodaj' name='submit'>
       
     </form>";
+  }else{
+    echo "zaloguj sie";
+  }
     ?>
 
  </div>

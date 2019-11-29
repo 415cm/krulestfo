@@ -54,6 +54,21 @@ font-family: "Roboto", sans-serif;
 a, p, h1, h2, h3{
 	font-family: "Roboto", sans-serif;
 }
+.selectWrapper{
+  border-radius:36px;
+  display:inline-block;
+  overflow:hidden;
+  background:#cccccc;
+  border:1px solid #cccccc;
+  float: right;
+}
+.selectBox{
+  width:200px;
+  height:40px;
+  border:0px;
+  outline:none;
+  padding-left: 15px;
+}
 /*
 .content-container {
   height: 100%;

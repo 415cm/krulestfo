@@ -5,15 +5,42 @@
 </head>
 <body>
 <div class="topnav">
+<?php
+  session_start();
+  if (isset($_SESSION['login']))
+  {
+  $username = $_SESSION['login'];
+  echo "
+  Zalogowano '$username'<br>
+  <a href='logout.php'> Wyloguj</a>";
+  }else{
+    echo "<a href='logowanie.php'>zaloguj sie</a>";
+  }
+  ?>
   
-  
-	<h3 class="logo">Bibliometr</h3>
-	<a href="wyszukiwarka.html">Wyszukiwarka</a>
+<h3 class="logo">Bibliometr</h3>
+	<a href="search.php">Wyszukiwarka</a>
   <div class="topnav-right">
-   <a href="stronaglowna.html">Strona główna</a>
+  <a href="index.php">Strona główna</a>
     <a href="osystemie.html">O systemie</a>
     <a href="kontakt.html">Kontakt</a>
   </div>
+</div>
+ <div class="selectWrapper">
+ <select class="selectBox" onchange="location = this.value;">
+  <option><?php session_start();
+   if(isset($_SESSION['login'])){
+      echo $_SESSION['login'];
+   }
+      ?></option>
+  <option value="artmanage.php">Zarządzanie artykułami</option>
+  <?php if($_SESSION['id']==2){
+      echo "<option value='panel.php'>Zarządzanie użytkownikami</option>";
+    }
+      
+      
+      ?>
+</select>
 </div>
 
 <div class="login-page">

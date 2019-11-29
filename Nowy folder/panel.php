@@ -18,12 +18,10 @@
 </div>
 
  <div class="selectWrapper">
-  <select class="selectBox">
-  <option>Administrator</option>
-  <option><a href="mojprofil.html">Mój profil</a></option>
-  <option><a href="zarzadzanie_artykuly.html">Zarządzanie artykułami</a></option>
-  <option><a href="zarzadzanie_userami.html">Zarządzanie użytkownikami</a></option>
-  <option><a href="wyloguj.html">Wyloguj</a></option>
+ <select class="selectBox" onchange="location = this.value;">
+  <option><?php session_start(); if(isset($_SESSION['login']))echo $_SESSION['login'];?></option>
+  <option value="artmanage.php">Zarządzanie artykułami</option>
+  <option value="panel.php">Zarządzanie użytkownikami</option>
 </select>
 </div>
 
@@ -41,42 +39,31 @@
       <th><th>
       </tr>
     <?php
-    session_start();
-    if ($_SESSION['id']==2)
-    {
+    if(isset($_SESSION['id'])){
+    if ($_SESSION['id']==2){
         require "conn.php";
         $sql = "SELECT * FROM benutzer WHERE id > 0";
     $result=$conn->query($sql);
     if ($result->num_rows > 0){
 		while ($row = $result->fetch_assoc()){    
       echo "
-       
-    
       <tr>
       <td>".$row['namee']."</td>
       <td>".$row['vorname']."</td>
       <td>".$row['email']."</td>
-      <td><button><a href='zmiana.html'>Zmień hasło</a></button></td>
-      <td><button><a href='usun.html'>Usuń konto</a></button></td>
-      
+      <td><button><a href='#'>Zmień hasło</a></button></td>
+      <td><button><a href='usunkonto.php?id=".$row['id']."'>Usuń konto</a></button></td>
       </tr>
-      
-    
-    
      </div>";
     }
+}
+}
 }else{
-        echo" dupa";
-        echo $_SESSION['id'];
-    }
+    echo "zaloguj sie";
 }
  ?>
  </table>
   </div>
-
-</body>
-</html>
-  </div>
-
+</div>
 </body>
 </html>

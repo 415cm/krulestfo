@@ -78,6 +78,22 @@ a, p, h1, h2, h3{
   margin: auto;
 }
 
+.selectWrapper{
+  border-radius:36px;
+  display:inline-block;
+  overflow:hidden;
+  background:#cccccc;
+  border:1px solid #cccccc;
+  float: right;
+}
+.selectBox{
+  width:200px;
+  height:40px;
+  border:0px;
+  outline:none;
+  padding-left: 15px;
+}
+
 .form {
   position: relative;
   z-index: 1;
