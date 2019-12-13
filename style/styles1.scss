@@ -1,0 +1,173 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+
+$primary-color: #76d0e4;
+$secondary-color: #e1e1e1;
+$third-color: #8b9ca0;
+$name-color: #ffffff;
+$text-position: left;
+$fav-font: "Roboto", sans-serif;
+$text-decor: none;
+$center-text: center;
+$left-floating: left;
+$right-floating: right;
+$form-color: #000000;
+
+#submit1{
+    background-color: $primary-color;
+}
+
+h3, a, p, th, td{
+	text-align: $text-position;
+}
+
+tr:nth-child(even) {background-color: $secondary-color;}
+
+body{
+background-color: $secondary-color;
+background-size: 1800px;
+margin: auto;
+}
+
+.topnav {
+    background-color: $primary-color;
+    overflow: hidden;
+    width: 100%;
+    a {
+        float: $left-floating;
+        color: $name-color;
+        text-align: $center-text;
+        padding: 14px 16px;
+        font-size: 17px;
+        text-decoration: $text-decor;
+        &:hover {
+            background-color: $secondary-color;
+            color: $form-color;
+          }
+      }
+      a.active {
+        background-color: $third-color;
+        color: $name-color;
+      }
+}
+
+.topnav-right {
+  float: $right-floating;
+}
+
+.logo{
+left: 45%;
+position: absolute;
+z-index: 99;
+color: $name-color;
+font-family: $fav-font;
+}
+
+a, p, h1, h2, h3{
+	font-family: $fav-font;
+}
+
+.login-page {
+  width: 1400px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+
+.form{
+    color: $form-color;
+    position: relative;
+  z-index: 1;
+  background: $name-color;
+  max-width: 800px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: $center-text;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    input {
+        font-family: $fav-font;
+        outline: 0;
+        background: $secondary-color;
+        width: 100%;
+        border: 0;
+        margin: 0 0 15px;
+        padding: 15px;
+        box-sizing: border-box;
+        font-size: 14px;
+      }
+
+      button {
+        font-family: $fav-font;
+        text-transform: uppercase;
+        outline: 0;
+        background: $third-color;
+        width: 90px;
+        height: 60px;
+        border: 0;
+        padding: 15px;
+        color: $name-color;
+        font-size: 10px;
+        -webkit-transition: all 0.3 ease;
+        transition: all 0.3 ease;
+        cursor: pointer;
+      }
+      button:hover, button:active, button:focus {
+        background: $secondary-color;
+      }
+    
+      .message {
+        margin: 15px 0 0;
+        color: $third-color;
+        font-size: 12px;
+        &:a {
+            color: $third-color;
+          }
+      }
+      
+      a, a:link{
+        text-decoration: $text-decor;
+    }
+}
+
+button{
+	margin-top: 15px;
+}
+
+.selectWrapper{
+  border-radius:36px;
+  display:inline-block;
+  overflow:hidden;
+  background:$secondary-color;
+  border:1px solid $secondary-color;
+  float: $right-floating;
+}
+.selectBox{
+  width:200px;
+  height:40px;
+  border:0px;
+  outline:none;
+  padding-left: 15px;
+}
+
+.addbutton{
+	position: absolute;
+	float: $left-floating;
+	left: 10px;
+	top: 5px;
+}
+
+.opis{
+height: 80px;
+
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+}
+
+
+
